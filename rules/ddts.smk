@@ -306,13 +306,12 @@ rule call_translocations_augmented_rgfa_graph:
     threads: 1
     params:
         memory_per_thread="96G",
-        script=srcdir("../scripts/identify_translocations_rgfa.py"),
         ref=get_graph_ref_base,
     benchmark:
         "benchmarks/{sample}/translocations/{sample}.txt"
     shell:
         """
-        python {params.script} --gaf {input.gaf} --gfa {input.gfa} --fastq {config[sample_data_folder]}/{wildcards.sample}/fastq/{wildcards.sample}.fastq.gz --ref {params.ref} --racon /u/adcosta/SimpsonLab/racon/build/bin/racon > {output}
+        python config[somvarg_dir]/somvarg.py --gaf {input.gaf} --gfa {input.gfa} > {output}
         """
 
 
@@ -342,11 +341,10 @@ rule call_translocations_hprc_graphs:
     threads: 1
     params:
         memory_per_thread="36G",
-        script=srcdir("../scripts/identify_translocations_rgfa.py"),
         ref=get_graph_ref_base,
     benchmark:
         "benchmarks/{sample}/translocations/{sample}.txt"
     shell:
         """
-        python {params.script} --gaf {input.hprc_minigraph} --gfa {config[hprc_minigraph]} --fastq {config[sample_data_folder]}/{wildcards.sample}/fastq/{wildcards.sample}.fastq.gz --ref {params.ref} --racon /u/adcosta/SimpsonLab/racon/build/bin/racon > {output.hprc_minigraph}
+        python config[somvarg_dir]/somvarg.py --gaf {input.hprc_minigraph} --gfa {config[hprc_minigraph]} > {output.hprc_minigraph}
         """

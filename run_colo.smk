@@ -11,7 +11,7 @@ rule all:
 
 rule all_translocations:
     input:
-        expand("{s}/augmented_graph/{s}.translocations.tsv", s=config["samples"]),
+        expand("{s}/sniffles/{s}.sniffles.vcf", s=config["samples"]),
         expand("{s}/hprc_minigraph/{s}.translocations.tsv", s=config["samples"]),
         expand("{s}/augmented_graph_rgfa/{s}.translocations.tsv", s=config["samples"])
 

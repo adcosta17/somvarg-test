@@ -57,6 +57,9 @@ minigraph:
 base_dir:
     /path/to/working/dir/
 
+somvarg_dir:
+    /path/to/somvarg/
+
 minimap_dir:
     /path/to/minimap2/
 

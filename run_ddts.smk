@@ -5,7 +5,7 @@ import glob
 rule all:
     input:
         expand("{s}/augmented_graph_rgfa/{s}.gaf", s=config["samples"]),
-        expand("{s}/hg38_graph/{s}.gaf", s=config["samples"]),
+        #expand("{s}/hg38_graph/{s}.gaf", s=config["samples"]),
         #expand("{s}/graph_aligner/{s}.gaf", s=config["samples"]),
         #expand("{s}/sniffles/{s}.sniffles.vcf", s=config["samples"]),
         #"combined_normals/combined.sniffles.vcf"
