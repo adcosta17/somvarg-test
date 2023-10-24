@@ -1,0 +1,83 @@
+chroms:
+    - chr1
+    - chr2
+    - chr3
+    - chr4
+    - chr5
+    - chr6
+    - chr7
+    - chr8
+    - chr9
+    - chr10
+    - chr11
+    - chr12
+    - chr13
+    - chr14
+    - chr15
+    - chr16
+    - chr17
+    - chr18
+    - chr19
+    - chr20
+    - chr21
+    - chr22
+    - chrX
+    - chrY
+
+samples:
+  - tumor
+  - normal
+
+normals:
+  - normal
+
+samples_all:
+  - tumor
+  - normal 
+
+
+tests:
+    - all
+
+sample_data_folder:
+   /path/to/data/
+
+hprc_minigraph:
+    /path/to/hprc/minigraph/hprc-v1.0-minigraph-grch38.gfa
+
+min_insertion_length: 100
+max_distance_to_reference_insertion: 50
+min_mapq: 20
+min_e_score: 1e-14
+min_detected_inclusion_length: 50
+
+minigraph:
+    /u/adcosta/SimpsonLab/minigraph/minigraph
+
+base_dir:
+    /path/to/working/dir/
+
+minimap_dir:
+    /path/to/minimap2/
+
+minimap2_preset:
+    map-ont
+
+base_ref:
+    /path/to/hg38.fa
+
+reference_all:
+    /path/to/hg38.fa
+
+reference_graph_base:
+    utils/ref_main_chr_only.fa    
+
+telomeres:
+   utils/hg38_telomeres.tsv
+
+centromeres:
+   utils/hg38_centromeres.tsv
+
+somrit_dir:
+    /path/to/somrit
+
