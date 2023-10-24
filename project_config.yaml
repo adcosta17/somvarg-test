@@ -70,7 +70,7 @@ reference_all:
     /path/to/hg38.fa
 
 reference_graph_base:
-    utils/ref_main_chr_only.fa    
+    /path/to/hg38_main_chromsomes.fa
 
 telomeres:
    utils/hg38_telomeres.tsv
